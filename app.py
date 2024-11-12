@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-# Load the saved ensemble model
-with open('c:/Users/hp/OneDrive/Desktop/mlop/ensemble_model.pkl', 'rb') as f:
+import os
+
+file_path = os.path.join(os.getcwd(), 'ensemble_model.pkl')
+with open(file_path, 'rb') as f:
     ensemble_model = pickle.load(f)
+
 
 
 st.title("Ensemble Model Predictor")
